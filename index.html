@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The-dailyset | Aesthetic Print Store</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <script src="https://js.stripe.com/v3/"></script>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+    body { background: #fafafa; color: #222; }
+    header { padding: 60px 20px; text-align: center; background: linear-gradient(135deg, #f5d0fe, #c7d2fe); }
+    header h1 { font-size: 3rem; margin-bottom: 10px; }
+    nav { display: flex; justify-content: center; gap: 30px; padding: 20px; background: white; }
+    nav a { text-decoration: none; color: #333; font-weight: 500; }
+    .products { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; padding: 60px; }
+    .card { background: white; border-radius: 16px; box-shadow: 0 10px 25px rgba(0,0,0,0.08); overflow: hidden; }
+    .card img { width: 100%; height: 280px; object-fit: cover; }
+    .card h3 { padding: 15px; }
+    .card button { margin: 0 15px 20px; padding: 12px; width: calc(100% - 30px); border: none; border-radius: 10px; background: #6366f1; color: white; font-size: 1rem; cursor: pointer; }
+    footer { text-align: center; padding: 40px; background: #111; color: #aaa; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>The-dailyset</h1>
+    <p>Print-on-demand essentials</p>
+  </header>
+
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">Shop</a>
+    <a href="#">Contact</a>
+  </nav>
+
+  <section class="products">
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30" />
+      <h3>Aesthetic Hoodie</h3>
+      <button onclick="checkout('hoodie')">Buy Now</button>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 The-dailyset</p>
+  </footer>
+
+<script>
+  function checkout(product) {
+    alert('Checkout connected via Printify + Stripe backend');
+  }
+</script>
+</body>
+</html>
